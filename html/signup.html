@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../css/style.css">
+  <title>회원가입</title>
+</head>
+<body>
+  <main class="container">
+    <header class="page-header">
+      <p class="eyebrow">Join us</p>
+      <h1>✍️ 회원가입</h1>
+      <p class="lead">SKALA-FRONT에 오신 것을 환영합니다. 아래 정보를 입력해 주세요.</p>
+    </header>
+
+    <form action="signup_result.html" method="get">
+      <fieldset>
+        <legend>계정 정보</legend>
+        <div class="form-grid">
+          <div class="form-group">
+            <label for="id">아이디</label>
+            <input type="text" id="id" name="id" minlength="4" maxlength="15" placeholder="4–15자 영문/숫자" required>
+          </div>
+          <div class="form-group">
+            <label for="password">비밀번호</label>
+            <input type="password" id="password" name="password" minlength="6" maxlength="20" placeholder="6–20자 영문/숫자/특수문자" required>
+          </div>
+          <div class="form-group">
+            <label for="email">이메일</label>
+            <input type="email" id="email" name="email" placeholder="example@email.com" required>
+          </div>
+        </div>
+      </fieldset>
+
+      <fieldset>
+        <legend>개인 프로필 정보</legend>
+        <div class="form-grid">
+          <div class="form-group">
+            <label for="name">이름</label>
+            <input type="text" id="name" name="name" placeholder="이름을 입력해 주세요" required>
+          </div>
+          <div class="form-group">
+            <label for="birth">생년월일</label>
+            <input type="date" id="birth" name="birth" required>
+          </div>
+          <div class="form-group full">
+            <span><strong>관심 분야</strong> (중복 선택 가능)</span>
+            <div class="check-list">
+              <label><input type="checkbox" name="interest" value="frontend"> 웹 프론트엔드</label>
+              <label><input type="checkbox" name="interest" value="design"> UI/UX 디자인</label>
+              <label><input type="checkbox" name="interest" value="backend"> 백엔드 &amp; 데이터베이스</label>
+              <label><input type="checkbox" name="interest" value="cloud"> 클라우드 &amp; 인프라</label>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="referral">가입 경로</label>
+            <select id="referral" name="referral">
+              <option value="search">검색</option>
+              <option value="social">소셜 미디어</option>
+              <option value="friend">친구 추천</option>
+            </select>
+          </div>
+        </div>
+      </fieldset>
+
+      <fieldset>
+        <legend>자기소개</legend>
+        <div class="form-group">
+          <label for="introduction">나를 표현하는 한 줄 소개 또는 가입 인사</label>
+          <textarea id="introduction" name="introduction" maxlength="200" placeholder="내용을 입력해 주세요. (최대 200자)"></textarea>
+        </div>
+      </fieldset>
+
+      <div class="actions">
+        <button class="button" type="submit">회원가입</button>
+        <button class="button secondary" type="reset">다시 작성</button>
+        <a class="button secondary" href="index.html">홈으로</a>
+      </div>
+    </form>
+  </main>
+</body>
+</html>
